@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JQuery图片轮播</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wll-container">
+  <header>
+    <h1>JQuery图片轮播，交错排列</h1>
+  </header>
+  <section id="wr-container" class="wr-container">
+    <div class="wr-wrapper">
+      <a href="###">
+        <div class="resize-img" style="background-image: url('images/1.jpg')"></div>
+      </a>
+      <a href="###">
+        <div class="resize-img" style="background-image: url('images/2.jpg')"></div>
+      </a>
+      <a href="###">
+        <div class="resize-img" style="background-image: url('images/3.jpg')"></div>
+      </a>
+      <a href="###">
+        <div class="resize-img" style="background-image: url('images/4.jpg')"></div>
+      </a>
+    </div>
+    <!--nav>
+      <span class="wr-prev">&lt;</span>
+      <span class="wr-next">&gt;</span>
+    </nav-->
+  </section>
+</div>
+
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="js/jquery.minamo.min.js"></script>
+<script>
+  $(function() {
+    // 图片宽高相等
+    var h_eq_w = $('.wr-wrapper').width();
+    $('.wr-wrapper a').find('.resize-img').css({'height': h_eq_w + 'px', 'width': h_eq_w + 'px'});
+
+    // 图片轮播
+    $('#wr-container').minamo({
+      current     : 0,      // 从第几张开始
+      autoplay	  : true,   // 自动播放
+      interval    : 2000,   // 播放间隔时间
+      margintop   : '60px', // 图片交错排列上边距
+      showlength  : 1,      // 定义每次显示的图片个数，TODO
+      xoffsethide : h_eq_w - 50, // 隐藏图片位置
+      xoffsetshow : h_eq_w - 50  // 显示图片位置
+    });
+  });
+  
+</script>
+</body>
+</html>

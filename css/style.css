@@ -1,0 +1,119 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+/*
+* Index
+*/
+.wll-container > header{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.wll-container > header h1{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 35px;
+    position: relative;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #FF5F6D;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    padding: 0px 0px 5px 0px;
+}
+.wll-container > header h1{
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.4);
+}
+.wr-container{
+    width: 100%;
+    position: relative;
+    margin-top: 4%;
+}
+.wr-wrapper{
+    width: 33.33%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+}
+.wr-wrapper a{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+.wr-wrapper a.wr-transition{
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.wr-wrapper a .img-show{
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0px 0px;
+}
+.wr-wrapper a .text_zone{
+    font-style: italic;
+    text-align: center;
+    line-height: 30px;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    color: #333;
+    font-size: 16px;
+    width: 100%;
+    bottom: -50px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 0px 0px 10px 10px;
+    display: none;
+    position: absolute;
+    padding: 5px 5px;
+}
+.wr-wrapper a.wr-center div{
+    display: block;
+}
+.wr-container nav{
+    width: 58px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -29px;
+}
+.wr-container nav span{
+    text-indent: -9000px;
+    float: left;
+    cursor:pointer;
+    width: 24px;
+    height: 25px;
+    opacity: 0.8;
+}
+.wr-container nav span:hover{
+    opacity: 1;
+}
+.wr-container nav span.wr-next{
+    background-position: top right;
+    margin-left: 10px;
+}
+
+/*
+* Images
+*/
+.resize-img {
+    position: relative;
+    border-radius: 10px 10px 0 0 ;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center
+}
